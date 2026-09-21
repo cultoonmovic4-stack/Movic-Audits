@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Brand Primary, Secondary, and Deep Tone */
+  --color-brand-umber: #513229;
+  --color-brand-umber-hover: #3E251E;
+  --color-brand-umber-dark: #2F1B16;
+  --color-brand-slate: #A5BCD6;
+  --color-brand-slate-light: #C5D5E8;
+  --color-brand-slate-dark: #88A3C2;
+  --color-brand-java: #231815;
+  --color-brand-java-light: #2D201C;
+
+  /* Neutrals & Surfaces */
+  --color-surface-canvas: #FAF8F6;
+  --color-surface-card: #FFFFFF;
+  --color-surface-muted: #F3EFEA;
+  --color-surface-dark: #1C1412;
+  --color-surface-dark-card: #281D1A;
+  --color-surface-dark-muted: #332521;
+
+  /* Borders */
+  --color-border-subtle: #E8E3DF;
+  --color-border-strong: #D5CDC7;
+  --color-border-dark: #3A2B26;
+
+  /* Typography Colors */
+  --color-text-primary: #231815;
+  --color-text-secondary: #584C46;
+  --color-text-muted: #82756E;
+  --color-text-light: #FAF8F6;
+  --color-text-light-muted: #C0B7B2;
+
+  /* Semantic Feedback */
+  --color-status-success: #2E7D32;
+  --color-status-warning: #D97706;
+  --color-status-error: #DC2626;
+  --color-status-info: #0288D1;
+}
+
+/* Custom Base Utilities */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  /* Accessible focus rings */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-slate);
+    outline-offset: 2px;
+  }
+}
+
+/* ========================================================================= */
+/* CINEMATIC MOTION SYSTEM                                                   */
+/* ========================================================================= */
+:root {
+  --ease-cinematic: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth Scrolling Anchor Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Reveal Transition Utility */
+.reveal-base {
+  transition-property: opacity, transform, clip-path;
+  transition-timing-function: var(--ease-cinematic);
+  will-change: opacity, transform;
+}
+
+/* Animation Variants Initial States */
+.reveal-init-fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.reveal-init-fade-in {
+  opacity: 0;
+}
+
+.reveal-init-fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+}
+
+.reveal-init-fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+}
+
+.reveal-init-scale-in {
+  opacity: 0;
+  transform: scale(0.96);
+}
+
+.reveal-init-line {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Animation Revealed Active States */
+.reveal-active-fade-up,
+.reveal-active-fade-in,
+.reveal-active-fade-left,
+.reveal-active-fade-right,
+.reveal-active-scale-in {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.reveal-active-line {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Image Reveal Camera Motion */
+.image-reveal-container {
+  overflow: hidden;
+}
+
+.image-reveal-img {
+  transition: opacity 1000ms var(--ease-cinematic), transform 1200ms var(--ease-cinematic);
+  will-change: opacity, transform;
+}
+
+.image-reveal-img-init {
+  opacity: 0;
+  transform: scale(1.06);
+}
+
+.image-reveal-img-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Mandatory Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-base,
+  .image-reveal-img,
+  [data-motion] {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .reveal-init-fade-up,
+  .reveal-init-fade-in,
+  .reveal-init-fade-left,
+  .reveal-init-fade-right,
+  .reveal-init-scale-in,
+  .image-reveal-img-init {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal-init-line {
+    transform: scaleX(1) !important;
+  }
+}
