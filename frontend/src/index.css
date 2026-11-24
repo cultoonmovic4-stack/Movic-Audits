@@ -152,7 +152,8 @@ html {
 
   .reveal-base,
   .image-reveal-img,
-  [data-motion] {
+  [data-motion],
+  [data-aos] {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

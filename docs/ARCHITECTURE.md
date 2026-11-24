@@ -12,7 +12,7 @@ The system consists of three primary layers:
 2. **Backend** — PHP and Laravel
 3. **Database** — MySQL
 
-Laragon will be used as the local development environment.
+XAMPP will be used as the local development environment.
 
 The frontend communicates with the backend through a RESTful API.
 
@@ -803,12 +803,12 @@ A safe example configuration file should be provided where appropriate.
 
 # 24. Local Development Architecture
 
-Laragon will be used as the local development environment.
+XAMPP will be used as the local development environment.
 
 The local setup will contain:
 
 ```text
-C:\laragon\www\movic-audits
+C:\xampp\htdocs\AdvancedPHP\Audits
 │
 ├── frontend/
 │
@@ -823,7 +823,7 @@ C:\laragon\www\movic-audits
 
 The frontend development server and Laravel development environment will operate independently while communicating through the configured API.
 
-MySQL will be managed through the Laragon environment.
+MySQL will be managed through the XAMPP environment.
 
 ---
 

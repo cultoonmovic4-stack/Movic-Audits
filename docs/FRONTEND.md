@@ -27,7 +27,7 @@ The frontend does not directly access MySQL.
 | API communication       | HTTP/JSON            |
 | Language                | JavaScript initially |
 | Package manager         | npm                  |
-| Development environment | Laragon              |
+| Development environment | XAMPP                |
 | Browser target          | Modern browsers      |
 
 TypeScript may be introduced later if the project requirements justify it, but the initial architecture assumes React with JavaScript.

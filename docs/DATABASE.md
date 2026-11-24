@@ -32,7 +32,7 @@ The schema is designed to support the initial website while leaving room for fut
 | ORM                 | Laravel Eloquent                                    |
 | Migrations          | Laravel migrations                                  |
 | Seeders             | Laravel database seeders                            |
-| Local database      | MySQL through Laragon                               |
+| Local database      | MySQL through XAMPP                                 |
 | Production database | MySQL-compatible database                           |
 | Character set       | `utf8mb4`                                           |
 | Collation           | `utf8mb4_unicode_ci` or project-standard equivalent |
@@ -1142,7 +1142,7 @@ Production credentials and real client information must never be included in dev
 
 # 29. Development Database
 
-The local environment will use MySQL through Laragon.
+The local environment will use MySQL through XAMPP.
 
 Expected database configuration will be provided through Laravel's `.env` file.
 
@@ -1152,12 +1152,12 @@ Example:
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=merit_media
+DB_DATABASE=movic_audits
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-The actual credentials depend on the local Laragon configuration.
+The actual credentials depend on the local XAMPP configuration.
 
 `.env` must not be committed to version control.
 

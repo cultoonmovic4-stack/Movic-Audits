@@ -141,22 +141,18 @@ export function PublicLayout() {
 
       {/* Public Footer — Production Editorial Layout */}
       <footer className="bg-[#120C0A] text-[#FAF8F6] mt-auto border-t border-[#3A2B26]">
-        <Container className="pt-12 sm:pt-16 lg:pt-20 pb-8">
-          {/* Zone 0: Header Brand Identifier */}
-          <div className="pb-8 border-b border-[#3A2B26]">
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#FAF8F6] block">
-              MOVIC AUDITS
-            </span>
-            <span className="text-[10px] font-semibold tracking-[0.22em] text-[#82756E] uppercase mt-0.5 block">
-              VISUAL PRODUCTION
-            </span>
-          </div>
-
+        <Container className="pt-12 sm:pt-14 lg:pt-16 pb-8">
           {/* Zone 1: Closing Statement / Primary CTA */}
           <Reveal variant="fade-up">
-            <div className="py-10 sm:py-16 lg:py-20 border-b border-[#3A2B26] flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+            <div className="pb-12 sm:pb-14 lg:pb-16 border-b border-[#3A2B26] flex flex-col lg:flex-row lg:items-end justify-between gap-8">
               <div className="max-w-2xl space-y-4">
-                <h2 className="text-2xl sm:text-4xl lg:text-[54px] font-extrabold text-[#FAF8F6] tracking-tight leading-[1.12] sm:leading-[1.08]">
+                <div className="flex items-center gap-3">
+                  <span className="w-7 h-px bg-[#A5BCD6]" aria-hidden="true" />
+                  <span className="text-[11px] font-bold uppercase tracking-[0.22em] text-[#A5BCD6]">
+                    Movic Audits &middot; Visual Production
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-[52px] font-extrabold text-[#FAF8F6] tracking-tight leading-[1.08]">
                   Visual stories, <br />
                   thoughtfully made.
                 </h2>
@@ -165,10 +161,10 @@ export function PublicLayout() {
                 </p>
               </div>
 
-              <div className="shrink-0 w-full sm:w-auto">
+              <div className="shrink-0 w-full sm:w-auto lg:pb-1">
                 <Link
                   to="/book"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#FAF8F6] hover:border-[#A5BCD6] text-[#FAF8F6] hover:bg-[#FAF8F6] hover:text-[#231815] text-xs font-bold uppercase tracking-[0.18em] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#A5BCD6] group min-h-[48px]"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 border border-[#FAF8F6] hover:border-[#A5BCD6] text-[#FAF8F6] hover:bg-[#FAF8F6] hover:text-[#231815] text-xs font-bold uppercase tracking-[0.18em] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#A5BCD6] group min-h-[48px] rounded-xs"
                 >
                   <span>Book a Shoot</span>
                   <span className="transition-transform duration-150 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
@@ -177,29 +173,32 @@ export function PublicLayout() {
             </div>
           </Reveal>
 
-          {/* Zone 2: Main Footer Content */}
-          <Reveal variant="fade-up" delay={120}>
-            <div className="py-12 sm:py-16 lg:py-20 border-b border-[#3A2B26]">
+          {/* Zone 2: Main Footer Content — Balanced & Aligned */}
+          <Reveal variant="fade-up" delay={100}>
+            <div className="py-12 sm:py-14 lg:py-16 border-b border-[#3A2B26]">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
-                {/* Left Column: Large Brand Identity Anchor */}
-                <div className="lg:col-span-5 space-y-3">
-                  <div className="text-3xl sm:text-5xl lg:text-[68px] font-extrabold text-[#FAF8F6] tracking-tight leading-[0.92] uppercase">
+                {/* Left Column: Brand Identity Anchor */}
+                <div className="lg:col-span-4 space-y-3">
+                  <div className="text-4xl sm:text-5xl xl:text-[58px] font-extrabold text-[#FAF8F6] tracking-tight leading-[0.94] uppercase">
                     MOVIC <br />
                     AUDITS
                   </div>
-                  <div className="text-[10px] sm:text-xs font-bold tracking-[0.26em] text-[#82756E] uppercase pt-1">
-                    VISUAL PRODUCTION
+                  <div className="flex items-center gap-3 pt-1">
+                    <span className="w-6 h-px bg-[#A5BCD6]" aria-hidden="true" />
+                    <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.24em] text-[#82756E] uppercase">
+                      VISUAL PRODUCTION
+                    </span>
                   </div>
                 </div>
 
-                {/* Right Column: Three Content / Navigation Groups */}
-                <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8 lg:gap-6">
-                  {/* Group 1: Explore */}
-                  <div className="space-y-4">
+                {/* Right Columns: Three Equal-Height Navigation Groups */}
+                <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-12 gap-8 lg:gap-6">
+                  {/* Group 1: Explore — 3x3 (2 columns × 3 rows) */}
+                  <div className="sm:col-span-5 space-y-4">
                     <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[#A5BCD6]">
                       EXPLORE
                     </h3>
-                    <ul className="space-y-2.5 text-sm text-[#C0B7B2]">
+                    <ul className="grid grid-cols-2 grid-flow-col grid-rows-3 gap-x-6 gap-y-2.5 text-sm text-[#C0B7B2]">
                       <li><Link to="/" className="hover:text-white transition-colors py-0.5 inline-block">Home</Link></li>
                       <li><Link to="/about" className="hover:text-white transition-colors py-0.5 inline-block">About</Link></li>
                       <li><Link to="/services" className="hover:text-white transition-colors py-0.5 inline-block">Services</Link></li>
@@ -209,8 +208,8 @@ export function PublicLayout() {
                     </ul>
                   </div>
 
-                  {/* Group 2: Services */}
-                  <div className="space-y-4">
+                  {/* Group 2: Services — 3 aligned rows */}
+                  <div className="sm:col-span-3 space-y-4">
                     <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[#A5BCD6]">
                       SERVICES
                     </h3>
@@ -221,8 +220,8 @@ export function PublicLayout() {
                     </ul>
                   </div>
 
-                  {/* Group 3: Get in Touch */}
-                  <div className="space-y-4">
+                  {/* Group 3: Get in Touch — 3 aligned rows */}
+                  <div className="sm:col-span-4 space-y-4">
                     <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-[#A5BCD6]">
                       GET IN TOUCH
                     </h3>
@@ -238,11 +237,6 @@ export function PublicLayout() {
                       <li>
                         <span className="py-0.5 inline-block">Kampala, Uganda</span>
                       </li>
-                      <li className="pt-2">
-                        <Link to="/admin/login" className="text-xs text-[#584C46] hover:text-[#A5BCD6] transition-colors py-1 inline-block">
-                          Administrator Access
-                        </Link>
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -250,17 +244,21 @@ export function PublicLayout() {
             </div>
           </Reveal>
 
-          {/* Zone 3: Bottom Legal Bar */}
-          <div className="pt-8 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-4 text-xs text-[#82756E] text-center sm:text-left">
-            <div>
+          {/* Zone 3: Bottom Legal Bar — True 3-Column Alignment */}
+          <div className="pt-7 grid grid-cols-1 sm:grid-cols-3 items-center gap-4 text-xs text-[#82756E] text-center">
+            <div className="sm:text-left">
               &copy; {new Date().getFullYear()} MOVIC AUDITS
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center justify-center gap-2.5">
               <span className="hover:text-[#C0B7B2] transition-colors cursor-pointer">Privacy Policy</span>
-              <span>&middot;</span>
+              <span aria-hidden="true">&middot;</span>
               <span className="hover:text-[#C0B7B2] transition-colors cursor-pointer">Terms</span>
+              <span aria-hidden="true">&middot;</span>
+              <Link to="/admin/login" className="hover:text-[#A5BCD6] transition-colors">
+                Admin
+              </Link>
             </div>
-            <div className="text-[11px] font-bold tracking-[0.22em] uppercase text-[#82756E]">
+            <div className="sm:text-right text-[11px] font-bold tracking-[0.22em] uppercase text-[#82756E]">
               VISUAL PRODUCTION
             </div>
           </div>

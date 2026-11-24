@@ -19,7 +19,7 @@ export default defineConfig({
     port: 5173,
     host: 'localhost',
     fs: {
-      allow: ['..', 'C:/laragon/www/movic-audits', 'C:/laragon/www/Meritmediaug'],
+      allow: ['..', 'C:/xampp/htdocs/AdvancedPHP/Audits'],
     },
     proxy: {
       '/api': {

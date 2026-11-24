@@ -132,18 +132,18 @@ Production should prioritize:
 
 # 5. Local Development Environment
 
-The local environment uses Laragon.
+The local environment uses XAMPP.
 
 Project location:
 
 ```text id="q2j7k5"
-C:\laragon\www\movic-audits
+C:\xampp\htdocs\AdvancedPHP\Audits
 ```
 
 The repository contains:
 
 ```text id="x1v8n4"
-movic-audits/
+Audits/
 ├── frontend/
 ├── backend/
 ├── docs/
@@ -155,8 +155,8 @@ movic-audits/
 Local development services include:
 
 * React/Vite development server
-* Laravel development server or Laragon web server
-* MySQL through Laragon
+* Laravel development server or XAMPP Apache web server
+* MySQL through XAMPP
 
 ---
 

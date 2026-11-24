@@ -47,10 +47,10 @@ The frontend should use an environment variable for the API URL.
 Example:
 
 ```env
-VITE_API_URL=http://localhost/movic-audits/backend/public
+VITE_API_BASE_URL=http://localhost:8000
 ```
 
-The exact local URL will depend on the Laragon configuration.
+The exact local URL will depend on the XAMPP configuration (for example, `http://localhost:8000` with `php artisan serve` or `http://localhost/AdvancedPHP/Audits/backend/public` via XAMPP Apache).
 
 Production will use the production API domain.
 

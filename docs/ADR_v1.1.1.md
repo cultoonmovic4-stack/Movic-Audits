@@ -3,11 +3,11 @@
 **Document Version:** 1.2.0 (Amended from v1.1.1 for Project Rebrand)  
 **Status:** APPROVED  
 **Project:** Movic Audits Web Application  
-**Canonical Project Path:** `C:\laragon\www\movic-audits`  
+**Canonical Project Path:** `C:\xampp\htdocs\AdvancedPHP\Audits`  
 **Primary Stack:** React (Vite, Tailwind CSS, React Router, JavaScript) + PHP / Laravel + Eloquent ORM + MySQL  
 
 > [!NOTE]
-> **Amendment v1.2.0 Note:** The project identity and local infrastructure have been updated from "Merit Media" to "Movic Audits" (Database: `movic_audits`, Path: `C:\laragon\www\movic-audits`). All underlying technical decisions—application architecture, database schema, API contracts, authentication, deletion policies, and media handling—remain authoritative and functionally unchanged.
+> **Amendment v1.2.0 Note:** The project identity and local infrastructure have been updated from "Merit Media" to "Movic Audits" (Database: `movic_audits`, Path: `C:\xampp\htdocs\AdvancedPHP\Audits`). All underlying technical decisions—application architecture, database schema, API contracts, authentication, deletion policies, and media handling—remain authoritative and functionally unchanged.
 
 ---
 
@@ -22,7 +22,7 @@
 | **05** | **Admin Route Naming Convention** | Resource-Oriented (`/admin/.../create` & `/admin/.../:id/edit`) | Adheres to standard REST conventions and eliminates ambiguity with `/new`. | Frontend React Router, Admin Navigation, Admin Layout | **CLOSED** |
 | **06** | **Portfolio Admin Route Structure** | Explicit Hierarchical Sub-Resources (`categories`, `albums`, `albums/:id/images`) | Reflects relational hierarchy; prevents overcrowded monolithic edit interfaces. | Admin Routes, Frontend Views, Admin API Endpoints | **CLOSED** |
 | **07** | **Media Foreign Key Naming** | Exact DB Column Names (`media_id`, `cover_media_id`, etc.) in API Payloads | Eliminates artificial translation layers between frontend payloads, validation rules, and DB schema. | Database, Form Requests, API Documentation, React Services | **CLOSED** |
-| **08** | **Authoritative Project Path** | `C:\laragon\www\movic-audits` | Establishes uniform directory structure; points to Movic Audits canonical environment. | Local Environment, Laragon VHost, Git Root | **CLOSED** |
+| **08** | **Authoritative Project Path** | `C:\xampp\htdocs\AdvancedPHP\Audits` | Establishes uniform directory structure; points to Movic Audits canonical environment. | Local Environment, XAMPP Apache/VHost, Git Root | **CLOSED** |
 | **09** | **API Routing & Versioning** | Base `/api/v1` with Dedicated Sub-Namespaces (`/auth`, `public`, `/admin`) | Future-proof version boundary; explicit separation between public and privileged endpoints. | Laravel Routes, Route Service Provider, React API Client | **CLOSED** |
 | **10** | **Content Lifecycle & Statuses** | Strictly Enforced State Machine per Entity Type | Distinguishes editorial drafts from archived records; preserves submission histories. | Database Enums/Strings, Validation Rules, Admin UI Filters | **CLOSED** |
 | **11** | **Slug Strategy & Reuse Rules** | Auto-Generated; Global Uniqueness across Active, Soft-Deleted, & Archived Records | Predictable URLs for SEO; prevents broken external backlinks; enforces collision suffixing. | Migrations, Eloquent Observers/Services, Frontend Routes | **CLOSED** |

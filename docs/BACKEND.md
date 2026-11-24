@@ -1091,7 +1091,7 @@ Example:
 ```env
 APP_ENV=local
 APP_DEBUG=true
-APP_URL=http://movic-audits.test
+APP_URL=http://localhost:8000
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -1113,27 +1113,27 @@ The `.env` file must not be committed to version control.
 
 # 37. Local Development
 
-The backend will run through the Laragon development environment.
+The backend will run through the XAMPP development environment.
 
 Expected repository location:
 
 ```text
-C:\laragon\www\movic-audits
+C:\xampp\htdocs\AdvancedPHP\Audits
 ```
 
 Backend location:
 
 ```text
-C:\laragon\www\movic-audits\backend
+C:\xampp\htdocs\AdvancedPHP\Audits\backend
 ```
 
 Frontend location:
 
 ```text
-C:\laragon\www\movic-audits\frontend
+C:\xampp\htdocs\AdvancedPHP\Audits\frontend
 ```
 
-MySQL is managed through the local Laragon environment.
+MySQL is managed through the local XAMPP environment.
 
 The frontend and backend remain separate applications while sharing the same repository.
 

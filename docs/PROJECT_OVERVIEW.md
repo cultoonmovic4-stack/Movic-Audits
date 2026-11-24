@@ -52,7 +52,7 @@ The main goals of the project are to:
 
 ### Local Development Environment
 
-* Laragon
+* XAMPP
 
 ### Version Control
 
@@ -504,7 +504,7 @@ Future features are not part of the initial scope unless explicitly approved.
 
 ## 19. Development Environment
 
-The project will be developed locally using Laragon.
+The project will be developed locally using XAMPP.
 
 The development environment will provide the services and tools required to run:
 

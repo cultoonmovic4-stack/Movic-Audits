@@ -2,7 +2,7 @@
  * Movic Audits — Visual Asset Registry
  *
  * Maps supplied photography and videography assets to semantic editorial roles.
- * Authoritative source: C:\laragon\www\movic-audits\frontend\src\assets
+ * Authoritative source: C:\xampp\htdocs\AdvancedPHP\Audits\frontend\src\assets
  */
 
 import heroDawn from './vovanquy-dawn-5517011_1920.jpg';

@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import AOS from 'aos';
 
 /**
  * RouteTransition — Subtle Editorial Page Change Transition
  *
  * Wraps page content to ensure clean, non-disruptive entry transitions on route change.
- * Resets window scroll to top smoothly when route path updates.
+ * Resets window scroll to top smoothly and refreshes AOS when route path updates.
  */
 export default function RouteTransition({ children }) {
   const location = useLocation();
@@ -22,10 +23,13 @@ export default function RouteTransition({ children }) {
       // jsdom or environment where scrollTo throws
     }
 
-    // Trigger brief, elegant route entrance fade
+    // Trigger brief, elegant route entrance fade and refresh AOS elements
     setIsVisible(false);
     const frameId = requestAnimationFrame(() => {
       setIsVisible(true);
+      if (!isJsdom && typeof window !== 'undefined') {
+        AOS.refreshHard();
+      }
     });
 
     return () => cancelAnimationFrame(frameId);

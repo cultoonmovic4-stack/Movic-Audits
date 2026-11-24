@@ -100,7 +100,7 @@ Create the local MySQL database.
 
 Configure:
 
-* Laragon
+* XAMPP
 * PHP
 * Composer
 * Node.js
