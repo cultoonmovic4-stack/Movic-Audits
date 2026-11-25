@@ -25,6 +25,19 @@ export async function loadJQueryValidation() {
           'Please enter a valid phone number (at least 7 digits).'
         );
       }
+      if ($.validator && !$.validator.methods.futureOrToday) {
+        $.validator.addMethod(
+          'futureOrToday',
+          function futureOrTodayValidator(value, element) {
+            if (this.optional(element)) return true;
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const selected = new Date(`${value}T00:00:00`);
+            return !Number.isNaN(selected.getTime()) && selected >= today;
+          },
+          'Please select today or a future production date.'
+        );
+      }
       return $;
     });
   }
